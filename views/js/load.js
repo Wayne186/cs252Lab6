@@ -1,8 +1,8 @@
-var start = "Welcome to the world of Grimgar"
+var start = "Welcome to the world of Grimgar and have something"
 
 
-window.onload = function() {
+/*window.onload = function() {
 	html = '<p>'+start+'</p></br>'
 	$('.start').append(html);
-}
+}*/
 
