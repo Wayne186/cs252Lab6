@@ -3,3 +3,305 @@
 	font-family:"AppleGothic";
 	/*border: 1px solid black;*/
 }
+
+body {
+	background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;   
+}
+
+@keyframes condemned_blink_effect {
+    0% {
+        visibility: hidden;
+    }
+    50% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+
+.bg {
+	height: 100vh;
+    width: 100vw;
+    position: fixed;
+}
+
+.start {
+	width: 100%;
+	height: 100vh;
+	background-image: url(/img/start.png);
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;   
+    text-align: center;
+}
+
+.title {
+	line-height: 80vh;
+    font-size: 7.5vw;
+    font-family: "Gill Sans";
+    color: white;
+    font-weight: 300;
+}
+
+.get_start {
+	font-family: "New Peninim NT";
+	font-family: "New Peninim NT";
+    margin-top: -32vh;
+    font-size: 3vw;
+    color: gray; /* fallback */
+    color: rgba(0, 0, 0, 0.5);
+    animation: 1s linear infinite condemned_blink_effect;
+}
+
+#canvas {
+	padding-top: 3vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    font-size: 1.55vw;
+    display: none;
+    width: 94%;
+    color: white;
+    height: 26vh;
+    position: fixed;
+    bottom: 0px;
+    font-family: monospace;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#canvas p {
+	color: white;
+    font-size: 2vw;
+}
+
+.left {
+	display: none;
+	position: fixed;
+    width: 47vw;
+    height: 100vh;
+}
+
+.left_img {
+	height: 54vh;
+	position: absolute;
+    left: 0vw;
+    bottom: 29vh;
+}
+
+.right {
+	position: fixed;
+	display: none;
+	height: 100%;
+    width: 47vw;
+    right: 0px;
+}
+
+.right_img {
+	position: absolute;
+    right: 0vw;
+    top: 17vh;
+    width: 41vh;
+}
+
+.left_img0 {
+	height: 19vh;
+    left: 32vw;
+    top: 30vh;
+    position: fixed;
+}
+
+.left_img1 {
+	left: 21vw;
+    top: 8vh;
+    height: 19vh;
+    position: fixed;
+}
+
+.left_img2 {
+	left: 18vw;
+    top: 45vh;
+    height: 19vh;
+    position: fixed;
+}
+
+.left_img3 {
+	left: 8vw;
+    top: 2vh;
+	height: 19vh;
+    position: fixed;
+}
+
+.left_img4 {
+	height: 19vh;
+    position: fixed;
+    left: 2vw;
+    top: 27vh;
+}
+
+.right0 {
+	height: 27vh;
+    right: 0px;
+    position: fixed;
+    top: 26vh;
+}
+
+.right1 {
+	position: fixed;
+    right: 9vw;
+    height: 29vh;
+    top: 30vh;
+}
+
+.right2 {
+	position: fixed;
+    height: 28vh;
+    top: 1vh;
+    right: 23vw;
+}
+
+.right3{
+	height: 26vh;
+    position: fixed;
+    right: 20vw;
+    top: 45vh;
+}
+
+.right4 {
+	height: 27vh;
+    position: fixed;
+    right: 32vw;
+    top: 40vh;
+}
+
+.right5 {
+	height: 28vh;
+    position: fixed;
+    right: 32vw;
+    top: 11vh;
+}
+
+.info {
+	width: 100%;
+    height: 21vh;
+    display: block;
+    z-index: 10;
+    bottom: 0px;
+    position: fixed;
+    color: white;
+}
+
+.name {
+	position: fixed;
+    left: 14vw;
+    color: white;
+    font-size: 2vw;
+    bottom: 18vh;
+}
+
+.avatar {
+    width: 9vw;
+    position: fixed;
+    left: 3vw;
+    bottom: 4vh;
+}
+
+.hp {
+	position: fixed;
+    font-size: 1.5vw;
+    left: 14vw;
+    bottom: 13vh;
+}
+
+.mp {
+	position: fixed;
+    font-size: 1.5vw;
+    left: 14vw;
+    bottom: 8vh;
+}
+
+.skills {
+	position: relative;
+    left: 39vw;
+    top: -1vh;
+}
+
+.escape {
+	position: fixed;
+    right: 2vw;
+    bottom: 1vh;
+}
+
+.target_hp {
+	right: 2vw;
+    position: fixed;
+    bottom: 23vh;
+}
+
+
+.stat{
+	position: fixed;
+    right: 12vw;
+    bottom: 1vh;
+}
+
+.cha_info {
+	display: none;
+	color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    height: 51vh;
+    width: 54vw;
+    top: 10vh;
+    left: 23vw;
+    font-size: 1.8vw;
+}
+
+.i_avatar {
+	height: 51vh;
+}
+
+.i_name {
+	position: fixed;
+    left: 37vw;
+    top: 12vh;
+    font-size: 2.5vw;
+}
+
+.i_hp {
+	position: fixed;
+    left: 37vw;
+    top: 17vh;
+}
+
+.i_mp {
+	position: fixed;
+    left: 52vw;
+    top: 17vh;
+}
+
+.i_at {
+	position: fixed;
+    left: 37vw;
+    top: 21vh;
+}
+
+.i_df {
+	position: fixed;
+    left: 52vw;
+    top: 21vh;
+}
+
+.i_sp {
+	position: fixed;
+    left: 37vw;
+    top: 25vh;
+}
+
+.i_skills {
+	position: relative;
+    left: 14vw;
+    top: -30vh;
+    font-size: 1.25vw;
+}

@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, 'js')))
 app.use(express.static(path.join(__dirname, 'views')))
 
 app.get('/', function(request, response) {
-  response.render('pages/index')
+  response.render('index')
 });
 
 app.listen(app.get('port'), function() {
