@@ -15,6 +15,7 @@ var start_scene = [
 	"The harder I try to think about it, the more I lost."
 ];*/
 
+var stop = false;
 var fight = false;
 
 var team = [ 	["Shihoru", 75, 60, 18, 2, 5, "Magic Missile", "Shadow"],
@@ -361,8 +362,13 @@ document.addEventListener('keydown', function(event) {
 	    	}
 	    }
 	    else {
-	    	document.getElementById("canvas").innerHTML = "";
-    		printLetterByLetter("canvas", "You have clear the first stage, enter your name for saving", 1);
+	    	if (!stop) {
+	    		document.getElementById("canvas").innerHTML = "";
+    			printLetterByLetter("canvas", "You have clear the first stage, enter your name for saving", 1);
+    			var form_sec = document.getElementById("form_sec");
+    			form_sec.style.display = "block";
+    			stop = true;
+    		}
 	    }
     }
 });
@@ -554,4 +560,21 @@ function printLetterByLetter(destination, message, speed){
             done = true;
         }
     }, speed);
+}
+
+function submitForm() {
+    var form = document.getElementById("form").elements;
+    var userInfo = { 'username': form.username.value};
+    console.log(userInfo);
+
+    $.ajax({
+        type: 'POST',
+        data: JSON.stringify(userInfo),
+        contentType: 'application/json',
+        url: 'http://localhost:5000/submitForm',                      
+        success: function(data) {
+        	console.log('success');
+    		console.log(JSON.stringify(data));
+        }
+    })
 }
